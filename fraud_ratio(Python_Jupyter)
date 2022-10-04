@@ -1,0 +1,10 @@
+import numpy as np
+from statsmodels.stats.proportion import proportions_ztest
+
+count = 28
+nobs = 94
+value = 0.16
+stat, pval = proportions_ztest(count, nobs, value)
+print(stat,pval)
+
+#conclusion: p-value < 0.05 then we reject the null hypothesis and the hypothetical level of fraud is not equal to 16%
